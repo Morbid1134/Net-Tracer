@@ -45,7 +45,9 @@ tracer(target=None, ports=None, socket_threads=10000, nmap_threads=8, output=Non
 ```
 
 ### Imports
-- ```python tracer(target=None)```
+- ```python 
+tracer(target=None)
+```
 
 #### Examples
 
