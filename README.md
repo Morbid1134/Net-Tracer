@@ -20,6 +20,12 @@ To run the port scanner, open a terminal window and navigate to the directory wh
 
 python net_tracer.py [-h] [-t TARGET] [-p PORTS [PORTS ...]] [-s SOCKET_THREADS] [-n NMAP_THREADS] [-o OUTPUT]
 
+You can, also, simply call the tracer() function from within your Python script.
+```python
+from net_tracer import tracer
+
+tracer(target=None, ports=None, socket_threads=10000, nmap_threads=8, output=None)
+```
 
 ### Optional Arguments
 
@@ -29,6 +35,22 @@ python net_tracer.py [-h] [-t TARGET] [-p PORTS [PORTS ...]] [-s SOCKET_THREADS]
 - `-s SOCKET_THREADS, --socket-threads SOCKET_THREADS`: number of socket threads to use (default: 10000).
 - `-n NMAP_THREADS, --nmap-threads NMAP_THREADS`: number of nmap threads to use (default: 8).
 - `-o OUTPUT, --output OUTPUT`: output file name (default: <target>.json).
+
+### Parameters
+- `target`: The IP address or hostname of the target you want to scan. If no value is provided, the user will be prompted to enter a target at runtime.
+- `ports`: A list or range of ports to scan. If no value is provided, all 65,535 ports will be scanned.
+- `socket_threads`: The number of threads to use for socket scanning. Default is set to 10,000.
+- `nmap_threads`: The number of threads to use for Nmap scanning. Default is set to 8.
+- `output`: The name of the output file to write the results to. If no value is provided, the output file will be named after the target IP address or hostname.
+
+#### Example
+
+This will scan ports 1 to 100 on the target IP address 192.168.1.1 and write the results to a file named "results.json".
+```python
+from net_tracer import tracer
+
+tracer(target="192.168.1.1", ports=range(1, 100), output="results.json")
+```
 
 ## License
 
