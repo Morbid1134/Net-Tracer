@@ -1,5 +1,2 @@
-argparse
-concurrent.futures
-json
 nmap
 pyfiglet

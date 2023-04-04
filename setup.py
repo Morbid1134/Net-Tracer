@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="net-tracer",
-    version="1.0.0",
+    version="1.0.2",
     author="Morbid",
     author_email="ethan.smith31415@gmail.com",
     description="A simple port scanner",
@@ -14,9 +14,6 @@ setuptools.setup(
     url="https://github.com/Morbid1134/Net-Tracer",
     packages=setuptools.find_packages(),
     install_requires=[
-        "argparse",
-        "concurrent.futures",
-        "json",
         "nmap",
         "pyfiglet"
     ],
