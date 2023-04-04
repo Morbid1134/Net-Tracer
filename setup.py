@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="net-tracer",
-    version="1.0.2",
+    version="1.0.3",
     author="Morbid",
     author_email="ethan.smith31415@gmail.com",
     description="A simple port scanner",
