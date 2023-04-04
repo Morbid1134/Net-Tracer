@@ -5,7 +5,10 @@ Net Tracer is a simple port scanner that scans a target IP address or hostname f
 ## Requirements
 
 - Python 3.7+
-- python-nmap (https://xael.org/pages/python-nmap-en.html)
+- argparse (https://docs.python.org/3/library/argparse.html)
+- concurrent.futures (https://docs.python.org/3/library/concurrent.futures.html)
+- json (https://docs.python.org/3/library/json.html)
+- nmap (https://xael.org/pages/python-nmap-en.html)
 - pyfiglet (https://pypi.org/project/pyfiglet/)
 
 ## Installation
