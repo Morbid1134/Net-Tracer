@@ -31,16 +31,16 @@ This will clone the repository, install the required dependencies, and install `
 
 Once `net-tracer` is installed, you can import it into your Python scripts using the following statement:
 ```python
-import net_tracer
+from net_tracer.net_tracer import tracer # from package_name.module_name import function_name
 ```
 
-That's it! You're ready to use net-tracer in your Python projects.
+That's it! You're ready to use `net-tracer` in your Python projects.
 
 ## Usage
 
 You can simply call the tracer() function from within your Python script.
 ```python
-from net_tracer import tracer
+from net_tracer.net_tracer import tracer
 
 tracer(target=None, ports=None, socket_threads=10000, nmap_threads=8, output=None)
 ```
