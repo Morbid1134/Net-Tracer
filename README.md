@@ -19,7 +19,7 @@ This will download and install the latest version of `net-tracer` and all its de
 
 Alternatively, you can clone the GitHub repository and install `net-tracer` manually. First, navigate to the directory where you want to clone the repository, then enter the following commands:
 ```bash
-git clone https://github.com/your_username/net-tracer.git
+git clone https://github.com/Morbid1134/Net-Tracer.git
 cd net-tracer
 pip install -r requirements.txt
 pip install .
