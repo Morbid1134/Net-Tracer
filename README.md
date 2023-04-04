@@ -46,12 +46,11 @@ tracer(target=None, ports=None, socket_threads=10000, nmap_threads=8, output=Non
 ```
 
 ### Import Parameters
-#### tracer()
-  - `target`: The IP address or hostname of the target you want to scan. If no value is provided, the user will be prompted to enter a target at runtime.
-  - `ports`: A list or range of ports to scan. If no value is provided, all 65,535 ports will be scanned.
-  - `socket_threads`: The number of threads to use for socket scanning. Default is set to 10,000.
-  - `nmap_threads`: The number of threads to use for Nmap scanning. Default is set to 8.
-  - `output`: The name of the output file to write the results to. If no value is provided, the output file will be named after the target IP address or hostname.
+- `target`: The IP address or hostname of the target you want to scan. If no value is provided, the user will be prompted to enter a target at runtime.
+- `ports`: A list or range of ports to scan. If no value is provided, all 65,535 ports will be scanned.
+- `socket_threads`: The number of threads to use for socket scanning. Default is set to 10,000.
+- `nmap_threads`: The number of threads to use for Nmap scanning. Default is set to 8.
+- `output`: The name of the output file to write the results to. If no value is provided, the output file will be named after the target IP address or hostname.
 
 #### Examples
 
