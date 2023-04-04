@@ -19,7 +19,7 @@ Net Tracer is a simple port scanner that scans a target IP address or hostname f
 To run the port scanner, open a terminal window and navigate to the directory where the `net_tracer.py` script is located.
 
 ```cmd
-python net_tracer.py [-h] [-t TARGET] [-p PORTS [PORTS ...]] [-s SOCKET_THREADS] [-n NMAP_THREADS] [-o OUTPUT]
+python -m net_tracer.py [-h] [-t TARGET] [-p PORTS [PORTS ...]] [-s SOCKET_THREADS] [-n NMAP_THREADS] [-o OUTPUT]
 ```
 
 You can, also, simply call the tracer() function from within your Python script.
@@ -53,7 +53,12 @@ from net_tracer import tracer
 
 tracer(target="192.168.1.1", ports=range(1, 100), output="results.json")
 ```
+as well as
 
+```cmd
+python -m net_tracer 192.1.1 -p 1:100 -o results.json
+```
+  
 ## License
 
 This project is licensed under the MIT License - see the `LICENSE` file for details.
