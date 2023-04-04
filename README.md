@@ -10,14 +10,33 @@ Net Tracer is a simple port scanner that scans a target IP address or hostname f
 
 ## Installation
 
-1. Install the required packages: pip install python-nmap pyfiglet
+You can install `net-tracer` using pip. First, make sure you have Python 3.6 or later installed on your system. Then, open a terminal or command prompt and enter the following command:
+```cmd
+pip install net-tracer
+```
 
-2. Download the `net_tracer.py` script from this repository.
+This will download and install the latest version of `net-tracer` and all its dependencies.
+
+Alternatively, you can clone the GitHub repository and install `net-tracer` manually. First, navigate to the directory where you want to clone the repository, then enter the following commands:
+```cmd
+git clone https://github.com/your_username/net-tracer.git
+cd net-tracer
+pip install -r requirements.txt
+pip install .
+```
+
+This will clone the repository, install the required dependencies, and install `net-tracer` locally on your system.
+
+Once `net-tracer` is installed, you can import it into your Python scripts using the following statement:
+```python
+import net_tracer
+```
+
+That's it! You're ready to use net-tracer in your Python projects.
 
 ## Usage
 
 To run the port scanner, open a terminal window and navigate to the directory where the `net_tracer.py` script is located.
-
 ```cmd
 python -m net_tracer.py [-h] [-t TARGET] [-p PORTS [PORTS ...]] [-s SOCKET_THREADS] [-n NMAP_THREADS] [-o OUTPUT]
 ```
@@ -53,8 +72,8 @@ from net_tracer import tracer
 
 tracer(target="192.168.1.1", ports=range(1, 100), output="results.json")
 ```
+  
 as well as
-
 ```cmd
 python -m net_tracer 192.1.1 -p 1:100 -o results.json
 ```
