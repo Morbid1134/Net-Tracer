@@ -1,11 +1,13 @@
 # Net Tracer
 
-Net Tracer is a simple port scanner that scans a target IP address or hostname for open ports and generates a JSON report of the scan results.
+Net Tracer is a Python tool for Network Security. Currently, it can:
+- `scan.py`: Scan a target IP address or hostname for open ports and generates a CSV report of the scan results. 
 
 ## Requirements
 
 - Python 3.7+
 - concurrent.futures (https://docs.python.org/3/library/concurrent.futures.html)
+- dnspython (https://github.com/rthalley/dnspython)
 - json (https://docs.python.org/3/library/json.html)
 - nmap (https://xael.org/pages/python-nmap-en.html)
 - pyfiglet (https://pypi.org/project/pyfiglet/)
@@ -31,35 +33,32 @@ This will clone the repository, install the required dependencies, and install `
 
 Once `net-tracer` is installed, you can import it into your Python scripts using the following statement:
 ```python
-from net_tracer.net_tracer import tracer # from package_name.module_name import function_name
+import net_tracer
 ```
 
 That's it! You're ready to use `net-tracer` in your Python projects.
 
 ## Usage
 
-You can simply call the tracer() function from within your Python script.
+You can simply call the imported functions from within your Python script.
 ```python
-from net_tracer.net_tracer import tracer
+import net_tracer
 
-tracer(target=None, ports=None, socket_threads=10000, nmap_threads=8, output=None)
+net_tracer.tracer(target=None, ports=None, socket_threads=10000, nmap_threads=8, output=None, printing=False)
 ```
 
-### Import Parameters
-- `target`: The IP address or hostname of the target you want to scan. If no value is provided, the user will be prompted to enter a target at runtime.
-- `ports`: A list or range of ports to scan. If no value is provided, all 65,535 ports will be scanned.
-- `socket_threads`: The number of threads to use for socket scanning. Default is set to 10,000.
-- `nmap_threads`: The number of threads to use for Nmap scanning. Default is set to 8.
-- `output`: The name of the output file to write the results to. If no value is provided, the output file will be named after the target IP address or hostname.
+### Function Parameters
+  #### tracer(target, ports, socket_threads, nmap_threads, output, printing)
+    - `target`: The IP address or hostname of the target you want to scan. If no value is provided, the user will be prompted to enter a target at runtime.
+    - `ports`: A list or range of ports to scan. If no value is provided, all 65,535 ports will be scanned.
+    - `socket_threads`: The number of threads to use for socket scanning. Default is set to 10,000.
+    - `nmap_threads`: The number of threads to use for Nmap scanning. Default is set to 8.
+    - `output`: The name of the output file to write the results to. If no value is provided, the output array will not be written to a file. Output will always be returned and can be set to variable no matter if saving to a file.
+    - `printing`: If `True` then it will print details as the code is ran. Default is set to `False`.
 
-#### Examples
+### Examples
 
-This will scan ports 1 to 100 on the target IP address 192.168.1.1 and write the results to a file named "results.json".
-```python
-from net_tracer import tracer
-
-tracer(target="192.168.1.1", ports=range(1, 100), output="results.json")
-```
+A full Python script is provided to show some ways of using this in [examples.py](examples.py)
   
 ## License
 
