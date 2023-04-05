@@ -47,8 +47,9 @@ import net_tracer
 net_tracer.tracer(target=None, ports=None, socket_threads=10000, nmap_threads=8, output=None, printing=False)
 ```
 
-### Function Parameters
-#### tracer(target, ports, socket_threads, nmap_threads, output, printing)
+## Function Parameters
+### tracer(target, ports, socket_threads, nmap_threads, output, printing)
+
 - `target`: The IP address or hostname of the target you want to scan. If no value is provided, the user will be prompted to enter a target at runtime.
 - `ports`: A list or range of ports to scan. If no value is provided, all 65,535 ports will be scanned.
 - `socket_threads`: The number of threads to use for socket scanning. Default is set to 10,000.
