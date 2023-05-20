@@ -59,7 +59,7 @@ net_tracer.tracer(target=None, ports=None, socket_threads=10000, nmap_threads=8,
 
 ### Examples
 
-A full Python script is provided to show some ways of using this in [examples.py](examples.py)
+A full Python script is provided to show some ways of using this in [examples.py](examples.py).
   
 ## License
 
